@@ -1,0 +1,335 @@
+(OK) Unloading intelmpi 2018.4.274
+(!!) no SLURM environment present, environment broken?
+(OK) Unloading Intel Suite 19.0.1.144
+(OK) Loading gcc system-default
+(OK) Intel MPI Suite 2018.4.274 loaded.
+(!!) no SLURM environment present, environment broken?
++(0):ERROR:0: Unable to locate a modulefile for 'python/3.6.8'
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.ERROR is deprecated. Please use tf.compat.v1.logging.ERROR instead.
+
+2023-03-25 12:02:56.348988: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2023-03-25 12:02:56.354445: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2023-03-25 12:02:56.354546: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49a4ad0 executing computations on platform Host. Devices:
+2023-03-25 12:02:56.354557: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2023-03-25 12:02:56.512440: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.6280439
+best_b_tensor 0.110417284
+best_c_tensor 0.6318611
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.9239888
+best_b_tensor 0.22319858
+best_c_tensor 0.25471303
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.4865522
+best_b_tensor 0.04269422
+best_c_tensor 0.48670152
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.89969
+best_b_tensor 0.060346324
+best_c_tensor 0.4725295
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.3736318
+best_b_tensor 0.05500968
+best_c_tensor 0.4895113
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.2734718
+best_b_tensor 0.27883038
+best_c_tensor 0.3349866
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.3794537
+best_b_tensor 0.31716165
+best_c_tensor 0.64020115
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.3153824
+best_b_tensor 0.2030823
+best_c_tensor 0.43423486
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.7555885
+best_b_tensor 0.2596306
+best_c_tensor 0.49896744
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.0475695
+best_b_tensor 0.5601965
+best_c_tensor 0.58916295
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.1
+missing continuous
+corr 0.2
+********************************
+RMSE [39.19372608 13.16607139  0.25231114]
+MAE [33.25126292 11.73455514  0.22688676]
+NRMSE [0.3681266  0.4480651  0.42104103]
+NRMSE std [0.07668729 0.10703213 0.04004642]
+********************************
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.613191
+best_b_tensor 0.09308368
+best_c_tensor 0.6156051
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.5652276
+best_b_tensor 0.19349591
+best_c_tensor 0.2554462
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.9231477
+best_b_tensor 0.0
+best_c_tensor 0.4949358
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.7637872
+best_b_tensor 0.0
+best_c_tensor 0.47900426
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.1307678
+best_b_tensor 0.094172165
+best_c_tensor 0.4995504
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 2.687027
+best_b_tensor 0.17016633
+best_c_tensor 0.3615526
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.0018094
+best_b_tensor 0.36629733
+best_c_tensor 0.5889596
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.9642699
+best_b_tensor 0.18907544
+best_c_tensor 0.37421012
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.0
+best_b_tensor 0.05274736
+best_c_tensor 0.4728906
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.0141265
+best_b_tensor 0.4437117
+best_c_tensor 0.4124264
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.1
+missing continuous
+corr 0.4
+********************************
+RMSE [39.8163474  12.5444388   0.26761348]
+MAE [28.60759437 10.82487764  0.2309021 ]
+NRMSE [0.38606179 0.42704422 0.44864218]
+NRMSE std [0.06064923 0.06347896 0.05361117]
+********************************
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.2609844
+best_b_tensor 0.0755881
+best_c_tensor 0.5297795
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 2.0684128
+best_b_tensor 0.39531717
+best_c_tensor 0.412217
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.2541642
+best_b_tensor 0.077034995
+best_c_tensor 0.48764735
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.3326436
+best_b_tensor 0.05300675
+best_c_tensor 0.48404646
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.1664305
+best_b_tensor 0.081373625
+best_c_tensor 0.48496577
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.0408753
+best_b_tensor 0.3747908
+best_c_tensor 0.38526332
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.7320688
+best_b_tensor 0.39230338
+best_c_tensor 0.5990444
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.229053
+best_b_tensor 0.21417539
+best_c_tensor 0.35994154
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.24386124
+best_b_tensor 0.055463847
+best_c_tensor 0.466208
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.2255158
+best_b_tensor 0.0023954795
+best_c_tensor 0.40723643
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.1
+missing continuous
+corr 0.6
+********************************
+RMSE [37.99373859 12.81336729  0.25143908]
+MAE [27.27279759 10.71495097  0.21448663]
+NRMSE [0.35785907 0.43355093 0.42381715]
+NRMSE std [0.03664802 0.05536364 0.0568917 ]
+********************************
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.1171223
+best_b_tensor 0.39583802
+best_c_tensor 0.44019517
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.3753847
+best_b_tensor 0.40449533
+best_c_tensor 0.34082544
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.4697493
+best_b_tensor 0.048669305
+best_c_tensor 0.4894654
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 2.068783
+best_b_tensor 0.015595966
+best_c_tensor 0.5171807
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.2511131
+best_b_tensor 0.038368884
+best_c_tensor 0.44644222
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.8243023
+best_b_tensor 0.24679258
+best_c_tensor 0.34051368
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 1.0068035
+best_b_tensor 0.37392896
+best_c_tensor 0.584569
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.47737965
+best_b_tensor 0.1326378
+best_c_tensor 0.30227962
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 0.0
+best_b_tensor 0.050196737
+best_c_tensor 0.4880132
+(1, 48, 5)
+(2, 48, 5)
+(16, 48, 5)
+best_a_tensor 2.1514022
+best_b_tensor 0.0
+best_c_tensor 0.34336582
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.1
+missing continuous
+corr 0.8
+********************************
+RMSE [44.65698811 14.23814246  0.24659847]
+MAE [29.93145752 11.62519285  0.20674546]
+NRMSE [0.42295118 0.48471451 0.4203442 ]
+NRMSE std [0.05882287 0.10976027 0.05030636]
+********************************
+Job ID: 34189748
+Cluster: rcc
+User/Group: yx685416/yx685416
+State: RUNNING
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:50:52 core-walltime
+Job Wall-clock time: 00:50:52
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 9.77 GB (9.77 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

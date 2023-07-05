@@ -1,0 +1,423 @@
+(OK) Unloading intelmpi 2018.4.274
+(!!) no SLURM environment present, environment broken?
+(OK) Unloading Intel Suite 19.0.1.144
+(OK) Loading gcc system-default
+(OK) Intel MPI Suite 2018.4.274 loaded.
+(!!) no SLURM environment present, environment broken?
++(0):ERROR:0: Unable to locate a modulefile for 'python/3.6.8'
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.ERROR is deprecated. Please use tf.compat.v1.logging.ERROR instead.
+
+2023-03-25 16:18:07.319580: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2023-03-25 16:18:07.326144: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2023-03-25 16:18:07.326259: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4ec1530 executing computations on platform Host. Devices:
+2023-03-25 16:18:07.326278: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2023-03-25 16:18:07.488377: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/core/_methods.py:202: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/core/_methods.py:202: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/core/_methods.py:202: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/rwthfs/rz/cluster/home/yx685416/project1/run.py:317: RuntimeWarning: divide by zero encountered in true_divide
+  NRMSE_avg = np.mean(RMSE/IQR, axis=0)
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/core/_methods.py:202: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.100251794
+best_b_tensor 0.030049047
+best_c_tensor 0.057086032
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.06277212
+best_b_tensor 0.0
+best_c_tensor 0.07162451
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.09316972
+best_b_tensor 0.0054581845
+best_c_tensor 0.08622587
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.12524264
+best_b_tensor 0.029838907
+best_c_tensor 0.08736581
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07852667
+best_b_tensor 0.00075856317
+best_c_tensor 0.0687303
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07937951
+best_b_tensor 0.0030657116
+best_c_tensor 0.07409192
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.10597406
+best_b_tensor 0.017375039
+best_c_tensor 0.1002777
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.08735673
+best_b_tensor 0.04430041
+best_c_tensor 0.050423693
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.17969912
+best_b_tensor 0.029881781
+best_c_tensor 0.11947023
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.13651845
+best_b_tensor 0.061954655
+best_c_tensor 0.06525594
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.4
+missing continuous
+corr 0.2
+********************************
+RMSE [16.0938564   8.52081888  0.4790553 ]
+MAE [13.70207983  7.21340214  0.42849204]
+NRMSE [       inf        inf 1.07932911]
+NRMSE std [      nan       nan 0.2672065]
+********************************
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.10313269
+best_b_tensor 0.028985854
+best_c_tensor 0.05855656
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07113825
+best_b_tensor 0.0
+best_c_tensor 0.0726879
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.08197297
+best_b_tensor 0.001790763
+best_c_tensor 0.08956059
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.13722602
+best_b_tensor 0.024268921
+best_c_tensor 0.09625642
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07623839
+best_b_tensor 0.0
+best_c_tensor 0.070147455
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07403312
+best_b_tensor 0.0
+best_c_tensor 0.0727096
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.08145291
+best_b_tensor 0.002404909
+best_c_tensor 0.07366071
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.11303927
+best_b_tensor 0.054744452
+best_c_tensor 0.06473522
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.17001472
+best_b_tensor 0.022959374
+best_c_tensor 0.108080536
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.16782674
+best_b_tensor 0.06485708
+best_c_tensor 0.074859746
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.4
+missing continuous
+corr 0.4
+********************************
+RMSE [15.82340094  8.73344291  0.5904582 ]
+MAE [13.05040007  7.21734584  0.52027825]
+NRMSE [       inf        inf 1.53882935]
+NRMSE std [       nan        nan 0.75799872]
+********************************
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.110982224
+best_b_tensor 0.033137605
+best_c_tensor 0.055275813
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.06285864
+best_b_tensor 0.0
+best_c_tensor 0.068014406
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.09826658
+best_b_tensor 0.005340458
+best_c_tensor 0.081902914
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.14366534
+best_b_tensor 0.026692407
+best_c_tensor 0.09898679
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.08697405
+best_b_tensor 0.0
+best_c_tensor 0.07261497
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.0644199
+best_b_tensor 0.0
+best_c_tensor 0.063619874
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.0877258
+best_b_tensor 0.006229359
+best_c_tensor 0.07868318
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.111155756
+best_b_tensor 0.059304085
+best_c_tensor 0.06515764
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.18937494
+best_b_tensor 0.021277215
+best_c_tensor 0.11671079
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.19237204
+best_b_tensor 0.080680706
+best_c_tensor 0.09004576
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.4
+missing continuous
+corr 0.6
+********************************
+RMSE [16.09858532  8.78615532  0.58643501]
+MAE [12.91004988  7.14815285  0.51173173]
+NRMSE [      inf       inf 1.5761305]
+NRMSE std [       nan        nan 0.71855016]
+********************************
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.12835711
+best_b_tensor 0.047024783
+best_c_tensor 0.0654868
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07558337
+best_b_tensor 0.0
+best_c_tensor 0.07892387
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.09765239
+best_b_tensor 0.0020878767
+best_c_tensor 0.096046664
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.14200358
+best_b_tensor 0.02824532
+best_c_tensor 0.09429467
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07558724
+best_b_tensor 0.00037978875
+best_c_tensor 0.06436327
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.075630106
+best_b_tensor 0.004126331
+best_c_tensor 0.0671718
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.07632898
+best_b_tensor 0.0020047287
+best_c_tensor 0.08356746
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.12867816
+best_b_tensor 0.06501538
+best_c_tensor 0.064108275
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.19574709
+best_b_tensor 0.022068009
+best_c_tensor 0.1433253
+(145, 48, 5)
+(36, 48, 5)
+(182, 48, 5)
+best_a_tensor 0.2191233
+best_b_tensor 0.087115005
+best_c_tensor 0.09269529
+target multivariate__t_oa__lambda1
+lambdaa 1
+train rate 0.4
+missing continuous
+corr 0.8
+********************************
+RMSE [19.19827999  9.45045339  0.62888011]
+MAE [15.6045799   7.7480327   0.54241206]
+NRMSE [       inf        inf 1.75842205]
+NRMSE std [       nan        nan 1.20439261]
+********************************
+Job ID: 34190448
+Cluster: rcc
+User/Group: yx685416/yx685416
+State: RUNNING
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 04:00:05 core-walltime
+Job Wall-clock time: 04:00:05
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 9.77 GB (9.77 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,276 @@
+(OK) Unloading intelmpi 2018.4.274
+(!!) no SLURM environment present, environment broken?
+(OK) Unloading Intel Suite 19.0.1.144
+(OK) Loading gcc system-default
+(OK) Intel MPI Suite 2018.4.274 loaded.
+(!!) no SLURM environment present, environment broken?
++(0):ERROR:0: Unable to locate a modulefile for 'python/3.6.8'
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2023-01-14 05:30:30.758663: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2023-01-14 05:30:30.763297: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2023-01-14 05:30:30.763398: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4f257c0 executing computations on platform Host. Devices:
+2023-01-14 05:30:30.763406: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2023-01-14 05:30:30.848802: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+[32m[I 2023-01-14 05:31:46,916][0m Finished trial#0 with value: 0.09008179605007172 with parameters: {'filters1': 72, 'filters2': 118, 'filters_size': 2, 'lr': 0.02935401944724376, 'batch_size': 64}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:33:02,521][0m Finished trial#1 with value: 0.1341637223958969 with parameters: {'filters1': 32, 'filters2': 84, 'filters_size': 10, 'lr': 0.09004651460632036, 'batch_size': 64}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:40:32,965][0m Finished trial#2 with value: 0.13898316025733948 with parameters: {'filters1': 186, 'filters2': 175, 'filters_size': 7, 'lr': 0.08952859995523779, 'batch_size': 256}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:41:10,908][0m Finished trial#3 with value: 0.13206835091114044 with parameters: {'filters1': 120, 'filters2': 65, 'filters_size': 1, 'lr': 0.09760649250728536, 'batch_size': 128}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:41:49,629][0m Finished trial#4 with value: 0.1166297197341919 with parameters: {'filters1': 28, 'filters2': 10, 'filters_size': 6, 'lr': 0.08214794136261688, 'batch_size': 128}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:41:57,060][0m Setting status of trial#5 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:43:22,920][0m Setting status of trial#6 as TrialState.PRUNED. Trial was pruned at epoch 70.[0m
+[32m[I 2023-01-14 05:43:28,579][0m Setting status of trial#7 as TrialState.PRUNED. Trial was pruned at epoch 3.[0m
+[32m[I 2023-01-14 05:45:41,366][0m Finished trial#8 with value: 0.11961232125759125 with parameters: {'filters1': 138, 'filters2': 159, 'filters_size': 4, 'lr': 0.04697462289915817, 'batch_size': 32}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:45:47,606][0m Setting status of trial#9 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:45:51,537][0m Setting status of trial#10 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:45:55,666][0m Setting status of trial#11 as TrialState.PRUNED. Trial was pruned at epoch 2.[0m
+[32m[I 2023-01-14 05:45:59,994][0m Setting status of trial#12 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:09,571][0m Setting status of trial#13 as TrialState.PRUNED. Trial was pruned at epoch 11.[0m
+[32m[I 2023-01-14 05:46:17,573][0m Setting status of trial#14 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:23,027][0m Setting status of trial#15 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:28,542][0m Setting status of trial#16 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:34,684][0m Setting status of trial#17 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:46,128][0m Setting status of trial#18 as TrialState.PRUNED. Trial was pruned at epoch 11.[0m
+[32m[I 2023-01-14 05:46:52,363][0m Setting status of trial#19 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:46:59,953][0m Setting status of trial#20 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:49:12,738][0m Finished trial#21 with value: 0.1264580488204956 with parameters: {'filters1': 136, 'filters2': 156, 'filters_size': 4, 'lr': 0.04874044588851423, 'batch_size': 32}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:49:25,443][0m Setting status of trial#22 as TrialState.PRUNED. Trial was pruned at epoch 4.[0m
+[32m[I 2023-01-14 05:50:39,981][0m Finished trial#23 with value: 0.12787486612796783 with parameters: {'filters1': 134, 'filters2': 180, 'filters_size': 2, 'lr': 0.039969043670396776, 'batch_size': 32}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:54:20,964][0m Finished trial#24 with value: 0.11655749380588531 with parameters: {'filters1': 184, 'filters2': 173, 'filters_size': 4, 'lr': 0.029101409901452064, 'batch_size': 32}. Best is trial#0 with value: 0.09008179605007172.[0m
+[32m[I 2023-01-14 05:54:29,397][0m Setting status of trial#25 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:56:03,128][0m Finished trial#26 with value: 0.08871738612651825 with parameters: {'filters1': 72, 'filters2': 83, 'filters_size': 5, 'lr': 0.029231114154726612, 'batch_size': 32}. Best is trial#26 with value: 0.08871738612651825.[0m
+[32m[I 2023-01-14 05:57:07,366][0m Finished trial#27 with value: 0.11269041150808334 with parameters: {'filters1': 70, 'filters2': 89, 'filters_size': 5, 'lr': 0.028949345824100407, 'batch_size': 32}. Best is trial#26 with value: 0.08871738612651825.[0m
+[32m[I 2023-01-14 05:57:16,387][0m Setting status of trial#28 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:57:25,337][0m Setting status of trial#29 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 05:59:45,199][0m Finished trial#30 with value: 0.11748822033405304 with parameters: {'filters1': 102, 'filters2': 94, 'filters_size': 8, 'lr': 0.03092709677812513, 'batch_size': 32}. Best is trial#26 with value: 0.08871738612651825.[0m
+[32m[I 2023-01-14 06:00:48,153][0m Finished trial#31 with value: 0.0935036689043045 with parameters: {'filters1': 76, 'filters2': 63, 'filters_size': 4, 'lr': 0.027687721333355262, 'batch_size': 32}. Best is trial#26 with value: 0.08871738612651825.[0m
+[32m[I 2023-01-14 06:01:41,585][0m Finished trial#32 with value: 0.09519016742706299 with parameters: {'filters1': 73, 'filters2': 56, 'filters_size': 5, 'lr': 0.03784071538669549, 'batch_size': 32}. Best is trial#26 with value: 0.08871738612651825.[0m
+[32m[I 2023-01-14 06:02:32,617][0m Finished trial#33 with value: 0.08699941635131836 with parameters: {'filters1': 52, 'filters2': 56, 'filters_size': 4, 'lr': 0.03610618699499479, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:02:42,291][0m Setting status of trial#34 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:02:52,339][0m Setting status of trial#35 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:03:05,612][0m Setting status of trial#36 as TrialState.PRUNED. Trial was pruned at epoch 5.[0m
+[32m[I 2023-01-14 06:03:17,095][0m Setting status of trial#37 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:05:08,771][0m Finished trial#38 with value: 0.1053687259554863 with parameters: {'filters1': 80, 'filters2': 115, 'filters_size': 6, 'lr': 0.03526043418627979, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:05:20,266][0m Setting status of trial#39 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:05:32,191][0m Setting status of trial#40 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:06:39,093][0m Finished trial#41 with value: 0.09474842995405197 with parameters: {'filters1': 75, 'filters2': 53, 'filters_size': 5, 'lr': 0.03504770604560899, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:08:19,628][0m Finished trial#42 with value: 0.11364725977182388 with parameters: {'filters1': 80, 'filters2': 51, 'filters_size': 6, 'lr': 0.03375771083450059, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:09:38,886][0m Finished trial#43 with value: 0.10035204142332077 with parameters: {'filters1': 92, 'filters2': 100, 'filters_size': 4, 'lr': 0.042035495093489396, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:09:52,225][0m Setting status of trial#44 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:10:07,008][0m Setting status of trial#45 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:10:20,687][0m Setting status of trial#46 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:10:35,432][0m Setting status of trial#47 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:10:50,405][0m Setting status of trial#48 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:11:05,386][0m Setting status of trial#49 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:11:22,079][0m Setting status of trial#50 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:12:41,278][0m Finished trial#51 with value: 0.09395083039999008 with parameters: {'filters1': 72, 'filters2': 54, 'filters_size': 5, 'lr': 0.037827508666507054, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:13:02,553][0m Setting status of trial#52 as TrialState.PRUNED. Trial was pruned at epoch 10.[0m
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/lib/nanfunctions.py:1366: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+[32m[I 2023-01-14 06:15:12,323][0m Finished trial#53 with value: 0.09182973951101303 with parameters: {'filters1': 54, 'filters2': 41, 'filters_size': 5, 'lr': 0.03323929333880212, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:16:01,175][0m Finished trial#54 with value: 0.08831993490457535 with parameters: {'filters1': 33, 'filters2': 15, 'filters_size': 4, 'lr': 0.05345268223592587, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:17:00,474][0m Finished trial#55 with value: 0.09250788390636444 with parameters: {'filters1': 30, 'filters2': 13, 'filters_size': 4, 'lr': 0.054496233897827456, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:17:17,305][0m Setting status of trial#56 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:17:34,564][0m Setting status of trial#57 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:17:52,215][0m Setting status of trial#58 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:18:10,565][0m Setting status of trial#59 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:18:28,476][0m Setting status of trial#60 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:18:46,552][0m Setting status of trial#61 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:19:04,957][0m Setting status of trial#62 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:19:28,584][0m Setting status of trial#63 as TrialState.PRUNED. Trial was pruned at epoch 9.[0m
+[32m[I 2023-01-14 06:19:47,752][0m Setting status of trial#64 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:20:06,999][0m Setting status of trial#65 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:20:28,139][0m Setting status of trial#66 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:22:14,450][0m Finished trial#67 with value: 0.09261706471443176 with parameters: {'filters1': 26, 'filters2': 144, 'filters_size': 5, 'lr': 0.029272825906788726, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:22:36,008][0m Setting status of trial#68 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:22:57,096][0m Setting status of trial#69 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:23:18,904][0m Setting status of trial#70 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:23:40,462][0m Setting status of trial#71 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:24:04,803][0m Setting status of trial#72 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:24:27,507][0m Setting status of trial#73 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:24:50,044][0m Setting status of trial#74 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:26:13,540][0m Finished trial#75 with value: 0.09498761594295502 with parameters: {'filters1': 42, 'filters2': 60, 'filters_size': 4, 'lr': 0.030498377132370823, 'batch_size': 32}. Best is trial#33 with value: 0.08699941635131836.[0m
+[32m[I 2023-01-14 06:26:36,358][0m Setting status of trial#76 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:27:00,337][0m Setting status of trial#77 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:27:25,887][0m Setting status of trial#78 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:27:50,835][0m Setting status of trial#79 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:28:15,455][0m Setting status of trial#80 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:29:49,177][0m Finished trial#81 with value: 0.08498893678188324 with parameters: {'filters1': 58, 'filters2': 45, 'filters_size': 5, 'lr': 0.03226104370361994, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:30:14,551][0m Setting status of trial#82 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+/home/yx685416/.local/lib/python3.6/site-packages/numpy/lib/nanfunctions.py:1366: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+[32m[I 2023-01-14 06:33:01,018][0m Finished trial#83 with value: 0.08679238706827164 with parameters: {'filters1': 49, 'filters2': 40, 'filters_size': 5, 'lr': 0.03337425728034038, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:33:26,149][0m Setting status of trial#84 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:33:52,354][0m Setting status of trial#85 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:34:23,549][0m Setting status of trial#86 as TrialState.PRUNED. Trial was pruned at epoch 8.[0m
+[32m[I 2023-01-14 06:34:52,092][0m Setting status of trial#87 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:35:20,216][0m Setting status of trial#88 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:35:48,237][0m Setting status of trial#89 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:36:18,351][0m Setting status of trial#90 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:36:46,747][0m Setting status of trial#91 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:37:15,800][0m Setting status of trial#92 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:37:44,879][0m Setting status of trial#93 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:39:50,256][0m Finished trial#94 with value: 0.09779298305511475 with parameters: {'filters1': 70, 'filters2': 70, 'filters_size': 5, 'lr': 0.03137545099595923, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:40:19,062][0m Setting status of trial#95 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:40:47,757][0m Setting status of trial#96 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:41:19,847][0m Setting status of trial#97 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:41:50,094][0m Setting status of trial#98 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:42:21,216][0m Setting status of trial#99 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:42:54,137][0m Setting status of trial#100 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:43:26,633][0m Setting status of trial#101 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:45:41,758][0m Finished trial#102 with value: 0.08913573622703552 with parameters: {'filters1': 71, 'filters2': 54, 'filters_size': 5, 'lr': 0.03707821681504169, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:46:13,475][0m Setting status of trial#103 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:46:45,710][0m Setting status of trial#104 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:47:25,858][0m Setting status of trial#105 as TrialState.PRUNED. Trial was pruned at epoch 8.[0m
+[32m[I 2023-01-14 06:47:59,168][0m Setting status of trial#106 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:48:32,283][0m Setting status of trial#107 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:49:06,392][0m Setting status of trial#108 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:49:40,150][0m Setting status of trial#109 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:51:23,196][0m Finished trial#110 with value: 0.09241228550672531 with parameters: {'filters1': 24, 'filters2': 89, 'filters_size': 4, 'lr': 0.027141837858183557, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:51:57,984][0m Setting status of trial#111 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:52:34,884][0m Setting status of trial#112 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:54:32,373][0m Finished trial#113 with value: 0.0906880646944046 with parameters: {'filters1': 23, 'filters2': 78, 'filters_size': 5, 'lr': 0.030906092583596487, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:55:07,524][0m Setting status of trial#114 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:55:44,593][0m Setting status of trial#115 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:58:31,242][0m Finished trial#116 with value: 0.09210935235023499 with parameters: {'filters1': 25, 'filters2': 163, 'filters_size': 5, 'lr': 0.031504038761810634, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 06:59:08,203][0m Setting status of trial#117 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 06:59:45,729][0m Setting status of trial#118 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:00:24,653][0m Setting status of trial#119 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:01:01,973][0m Setting status of trial#120 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:01:40,975][0m Setting status of trial#121 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:02:20,623][0m Setting status of trial#122 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:02:59,792][0m Setting status of trial#123 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:03:40,922][0m Setting status of trial#124 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:04:21,491][0m Setting status of trial#125 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:05:03,491][0m Setting status of trial#126 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:05:43,753][0m Setting status of trial#127 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:06:23,996][0m Setting status of trial#128 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:07:05,836][0m Setting status of trial#129 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:07:46,180][0m Setting status of trial#130 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:08:28,825][0m Setting status of trial#131 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:09:12,239][0m Setting status of trial#132 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:09:55,658][0m Setting status of trial#133 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:11:52,193][0m Finished trial#134 with value: 0.08579929172992706 with parameters: {'filters1': 53, 'filters2': 59, 'filters_size': 4, 'lr': 0.03091085737156262, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 07:12:33,410][0m Setting status of trial#135 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:13:22,080][0m Setting status of trial#136 as TrialState.PRUNED. Trial was pruned at epoch 8.[0m
+[32m[I 2023-01-14 07:15:22,967][0m Finished trial#137 with value: 0.09498695284128189 with parameters: {'filters1': 40, 'filters2': 45, 'filters_size': 4, 'lr': 0.03332164001862225, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 07:16:06,711][0m Setting status of trial#138 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:16:49,928][0m Setting status of trial#139 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:17:35,671][0m Setting status of trial#140 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:18:20,353][0m Setting status of trial#141 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:19:06,761][0m Setting status of trial#142 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:19:51,504][0m Setting status of trial#143 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:20:38,614][0m Setting status of trial#144 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:21:25,002][0m Setting status of trial#145 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:22:12,629][0m Setting status of trial#146 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:22:59,266][0m Setting status of trial#147 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:23:47,198][0m Setting status of trial#148 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:24:34,681][0m Setting status of trial#149 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:25:24,471][0m Setting status of trial#150 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:26:16,312][0m Setting status of trial#151 as TrialState.PRUNED. Trial was pruned at epoch 4.[0m
+[32m[I 2023-01-14 07:28:29,588][0m Finished trial#152 with value: 0.08909042924642563 with parameters: {'filters1': 71, 'filters2': 53, 'filters_size': 5, 'lr': 0.03789749271503502, 'batch_size': 32}. Best is trial#81 with value: 0.08498893678188324.[0m
+[32m[I 2023-01-14 07:29:17,484][0m Setting status of trial#153 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:30:13,712][0m Setting status of trial#154 as TrialState.PRUNED. Trial was pruned at epoch 9.[0m
+[32m[I 2023-01-14 07:33:00,294][0m Finished trial#155 with value: 0.08355335146188736 with parameters: {'filters1': 73, 'filters2': 77, 'filters_size': 5, 'lr': 0.03562996850998035, 'batch_size': 32}. Best is trial#155 with value: 0.08355335146188736.[0m
+[32m[I 2023-01-14 07:33:49,693][0m Setting status of trial#156 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:34:49,338][0m Setting status of trial#157 as TrialState.PRUNED. Trial was pruned at epoch 9.[0m
+[32m[I 2023-01-14 07:35:39,943][0m Setting status of trial#158 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:36:32,690][0m Setting status of trial#159 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:37:26,523][0m Setting status of trial#160 as TrialState.PRUNED. Trial was pruned at epoch 8.[0m
+[32m[I 2023-01-14 07:38:19,417][0m Setting status of trial#161 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:39:13,162][0m Setting status of trial#162 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:41:45,520][0m Finished trial#163 with value: 0.08836596459150314 with parameters: {'filters1': 65, 'filters2': 57, 'filters_size': 5, 'lr': 0.0335094151085515, 'batch_size': 32}. Best is trial#155 with value: 0.08355335146188736.[0m
+[32m[I 2023-01-14 07:42:37,398][0m Setting status of trial#164 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:43:32,950][0m Setting status of trial#165 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:44:28,888][0m Setting status of trial#166 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:45:22,736][0m Setting status of trial#167 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:46:15,938][0m Setting status of trial#168 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:47:23,367][0m Setting status of trial#169 as TrialState.PRUNED. Trial was pruned at epoch 11.[0m
+[32m[I 2023-01-14 07:48:19,950][0m Setting status of trial#170 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:49:16,344][0m Setting status of trial#171 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:50:14,038][0m Setting status of trial#172 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:52:50,105][0m Finished trial#173 with value: 0.09063099324703217 with parameters: {'filters1': 75, 'filters2': 63, 'filters_size': 4, 'lr': 0.029303673740993824, 'batch_size': 32}. Best is trial#155 with value: 0.08355335146188736.[0m
+[32m[I 2023-01-14 07:53:47,754][0m Setting status of trial#174 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:54:50,588][0m Setting status of trial#175 as TrialState.PRUNED. Trial was pruned at epoch 6.[0m
+[32m[I 2023-01-14 07:55:49,020][0m Setting status of trial#176 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:56:48,907][0m Setting status of trial#177 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:57:46,354][0m Setting status of trial#178 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:58:45,538][0m Setting status of trial#179 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 07:59:44,735][0m Setting status of trial#180 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:00:46,313][0m Setting status of trial#181 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:01:47,581][0m Setting status of trial#182 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:02:49,437][0m Setting status of trial#183 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:03:49,064][0m Setting status of trial#184 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:04:52,606][0m Setting status of trial#185 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:05:55,259][0m Setting status of trial#186 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:06:58,549][0m Setting status of trial#187 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:08:00,569][0m Setting status of trial#188 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:09:05,802][0m Setting status of trial#189 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:10:11,596][0m Setting status of trial#190 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:11:14,362][0m Setting status of trial#191 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:12:19,708][0m Setting status of trial#192 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:13:25,647][0m Setting status of trial#193 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:14:30,192][0m Setting status of trial#194 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:17:38,121][0m Finished trial#195 with value: 0.09137826412916183 with parameters: {'filters1': 61, 'filters2': 93, 'filters_size': 5, 'lr': 0.028132936915573083, 'batch_size': 32}. Best is trial#155 with value: 0.08355335146188736.[0m
+[32m[I 2023-01-14 08:18:43,155][0m Setting status of trial#196 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:19:49,330][0m Setting status of trial#197 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:20:55,741][0m Setting status of trial#198 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+[32m[I 2023-01-14 08:22:05,104][0m Setting status of trial#199 as TrialState.PRUNED. Trial was pruned at epoch 1.[0m
+********************************
+target multivariate
+lambdaa 0
+constrain False
+aug 80
+train rate 0.025
+missing continuous
+corr 0.6
+********************************
+Study statistics: 
+  Number of finished trials:  200
+  Number of pruned trials:  200
+  Number of complete trials:  200
+Best trial:
+  Value:  0.08355335146188736
+  Params: 
+    filters1: 73
+    filters2: 77
+    filters_size: 5
+    lr: 0.03562996850998035
+    batch_size: 32
+Job ID: 32129467
+Cluster: rcc
+User/Group: yx685416/yx685416
+State: RUNNING
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 02:51:58 core-walltime
+Job Wall-clock time: 02:51:58
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 9.77 GB (9.77 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

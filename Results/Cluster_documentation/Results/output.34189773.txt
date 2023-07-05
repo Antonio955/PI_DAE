@@ -1,0 +1,215 @@
+(OK) Unloading intelmpi 2018.4.274
+(!!) no SLURM environment present, environment broken?
+(OK) Unloading Intel Suite 19.0.1.144
+(OK) Loading gcc system-default
+(OK) Intel MPI Suite 2018.4.274 loaded.
+(!!) no SLURM environment present, environment broken?
++(0):ERROR:0: Unable to locate a modulefile for 'python/3.6.8'
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/yx685416/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /rwthfs/rz/cluster/home/yx685416/project1/support_class_.py:12: The name tf.logging.ERROR is deprecated. Please use tf.compat.v1.logging.ERROR instead.
+
+2023-03-25 12:07:49.233752: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2023-03-25 12:07:49.239686: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2023-03-25 12:07:49.239795: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49ea470 executing computations on platform Host. Devices:
+2023-03-25 12:07:49.239804: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2023-03-25 12:07:49.353364: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+target multivariate__t_oa
+lambdaa 0
+train rate 0.4
+missing continuous
+corr 0.2
+********************************
+RMSE [21.8641523   9.24563228  0.18325073]
+MAE [17.02901417  7.84916931  0.15955583]
+NRMSE [0.2162032  0.32244685 0.30606395]
+NRMSE std [0.04004728 0.02565907 0.04070341]
+********************************
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+target multivariate__t_oa
+lambdaa 0
+train rate 0.4
+missing continuous
+corr 0.4
+********************************
+RMSE [21.50037967  9.78430089  0.22413713]
+MAE [15.86353681  8.22313357  0.19345879]
+NRMSE [0.21319888 0.34227998 0.37829335]
+NRMSE std [0.0328991  0.02486034 0.07182009]
+********************************
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+target multivariate__t_oa
+lambdaa 0
+train rate 0.4
+missing continuous
+corr 0.6
+********************************
+RMSE [26.12089042  9.90742227  0.23695216]
+MAE [18.38309437  8.0615893   0.19822053]
+NRMSE [0.25518424 0.34334606 0.400121  ]
+NRMSE std [0.03279814 0.02556608 0.07420589]
+********************************
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+(7, 48, 5)
+(2, 48, 5)
+(10, 48, 5)
+target multivariate__t_oa
+lambdaa 0
+train rate 0.4
+missing continuous
+corr 0.8
+********************************
+RMSE [27.82579186 10.67650317  0.2337567 ]
+MAE [18.98077618  8.68273418  0.19701508]
+NRMSE [0.26586459 0.37052328 0.39281303]
+NRMSE std [0.0294199  0.03733859 0.06782086]
+********************************
+Job ID: 34189773
+Cluster: rcc
+User/Group: yx685416/yx685416
+State: RUNNING
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 01:17:16 core-walltime
+Job Wall-clock time: 01:17:16
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 9.77 GB (9.77 GB/core)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
