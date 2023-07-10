@@ -31,7 +31,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-python Codes/processing.py --input_directory Data/lbnlbldg59/ --output_data Data/lbnlbldg59/processed/dataset_new.csv
+python Codes/processing.py --input_directory Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data Data/lbnlbldg59/processed/dataset_new.csv
 ```
 
 >📋  Describe how to preprocess data
