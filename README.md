@@ -2,7 +2,7 @@
 
 # My Paper Title
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
+This repository is the official implementation of [Opening the Black Box: Illuminating energy data imputation with building physics insights](link to paper). 
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
@@ -11,10 +11,40 @@ This repository is the official implementation of [My Paper Title](https://arxiv
 To install requirements:
 
 ```setup
-pip install -r requirements.txt
+pip install Keras==2.2.4
+pip install optuna==1.5.0
+pip install pickle5==0.0.12
+pip install scipy==1.5.4
+pip install tensorflow==1.14.0
 ```
 
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+
+## Data
+
+Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59> to <Data/lbnlbldg59>
+
+>📋  Describe where to download the data
+
+## Preprocessing
+
+To preprocess the data, run this command:
+
+```preprocessing
+python processing.py --input-data <Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/> --output-data <path_to_data>
+```
+
+>📋  Describe how to preprocess data
+
+## Day-to-day matrix
+
+To create random shuffled day-to-day matrices, run this command (use --help for further information):
+
+```matrix cration
+python create_matrix.py --seeds 1
+```
+
+>📋  Describe how to preprocess data
 
 ## Training
 
