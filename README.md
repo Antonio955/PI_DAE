@@ -1,10 +1,6 @@
->📋  A template README.md for code accompanying a Machine Learning paper
-
 # Opening the Black Box: Illuminating energy data imputation with building physics insights
 
 This repository is the official implementation of [Opening the Black Box: Illuminating energy data imputation with building physics insights](link to paper). 
-
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
 ## Requirements
 
@@ -18,13 +14,9 @@ pip install scipy==1.5.4
 pip install tensorflow==1.14.0
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
-
 ## Data
 
 Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
-
->📋  Describe where to download the data
 
 ## Preprocessing
 
@@ -34,8 +26,6 @@ To preprocess the data, run this command (use --help for further information):
 python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/dataset_processed.csv
 ```
 
->📋  Describe how to preprocess data
-
 ## Day-to-day matrix
 
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
@@ -43,8 +33,6 @@ Create 10 random shuffled day-to-day matrices, by running this command (use --he
 ```matrix creation
 python Codes/create_matrices.py --input_data your_directory/dataset_processed.csv --output_directory your_directory/shuffled_data/ --seeds 1
 ```
-
->📋  Describe how to create matrices
 
 ## Training
 
