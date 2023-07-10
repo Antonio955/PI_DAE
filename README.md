@@ -31,7 +31,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed/dataset_new.csv
+python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/dataset_processed.csv
 ```
 
 >📋  Describe how to preprocess data
@@ -41,7 +41,7 @@ python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg5
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-python Codes/create_matrices.py --input_data your_directory/processed/dataset_new.csv --output_directory your_directory/processed/shuffled_data/ --seeds 1
+python Codes/create_matrices.py --input_data your_directory/dataset_processed.csv --output_directory your_directory/shuffled_data/ --seeds 1
 ```
 
 >📋  Describe how to create matrices
