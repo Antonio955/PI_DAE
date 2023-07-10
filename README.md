@@ -22,7 +22,7 @@ pip install tensorflow==1.14.0
 
 ## Data
 
-Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59> to <Data/lbnlbldg59>
+Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 
 >📋  Describe where to download the data
 
