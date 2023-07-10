@@ -28,23 +28,23 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59> to <
 
 ## Preprocessing
 
-To preprocess the data, run this command:
+To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-python processing.py --input-data <Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/> --output-data <path_to_data>
+python Codes/processing.py --input_directory Data/lbnlbldg59/ --output_data Data/lbnlbldg59/processed/dataset_new.csv
 ```
 
 >📋  Describe how to preprocess data
 
 ## Day-to-day matrix
 
-To create random shuffled day-to-day matrices, run this command (use --help for further information):
+Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
-```matrix cration
-python create_matrix.py --seeds 1
+```matrix creation
+python Codes/create_matrices.py --input_data Data/lbnlbldg59/processed/dataset_new.csv --output_directory Data/lbnlbldg59/processed/shuffled_data/ --seeds 1
 ```
 
->📋  Describe how to preprocess data
+>📋  Describe how to create matrices
 
 ## Training
 
