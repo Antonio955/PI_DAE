@@ -1,6 +1,6 @@
 >📋  A template README.md for code accompanying a Machine Learning paper
 
-# My Paper Title
+# Opening the Black Box: Illuminating energy data imputation with building physics insights
 
 This repository is the official implementation of [Opening the Black Box: Illuminating energy data imputation with building physics insights](link to paper). 
 
