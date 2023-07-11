@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed/dataset_processed.csv
+py Codes/processing.py --input_directory your_directory/Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/Data/processed/dataset_processed.csv
 ```
 
 ## Day-to-day matrix
@@ -31,7 +31,7 @@ py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.pr
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-py Codes/create_matrices.py --input_data your_directory/processed/dataset_processed.csv --output_directory your_directory/processed/shuffled_data/ --seeds 1
+py Codes/create_matrices.py --input_data your_directory/Data/processed/dataset_processed.csv --output_directory your_directory/Data/processed/shuffled_data/ --seeds 1
 ```
 
 ## Correlations
@@ -39,25 +39,35 @@ py Codes/create_matrices.py --input_data your_directory/processed/dataset_proces
 To get the correlation coefficients, run this command (use --help for further information):
 
 ```Correlation coefficients
-py Codes/scatterplot_print.py --input_directory your_directory/processed/shuffled_data/ --threshold_q_cool 50 --threshold_q_heat 20
+py Codes/scatterplot_print.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20
 ```
+
+## Tuning
+
+To tune the model(s) in the paper, run this command (use --help for further information):
+
+```tune
+py Codes/tune.py --path your_directory --lambdaa 1 --features 4 --target t_ra --corr 0.2
+```
+
+Tuned hyperparameters can be accessed here: your_directory/Results/Tuning/Tuning.csv
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+To train the model(s) in the paper, run this command (use --help for further information):
 
 ```train
-py Codes/scatterplot_print.py --input_directory your_directory/processed/shuffled_data/ --threshold_q_cool 50 --threshold_q_heat 20
+py Codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
 ```
-
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
+To evaluate my model on ImageNet, run (use --help for further information):
 
 ```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
