@@ -62,15 +62,13 @@ py Codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run (use --help for further information):
+To evaluate the model(s) in the paper, run these commands (use --help for further information):
 
 ```eval
 py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
 py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 ```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
 
 ## Pre-trained Models
 
