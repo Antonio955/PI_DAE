@@ -5,16 +5,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle5 as pickle
+from pathlib import Path
 import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--input_directory", help="Specify the input directory")
-parser.add_argument("--output_data", help="Specify the output data")
+parser.add_argument("--output_directory", help="Specify the output directory")
 
 args = parser.parse_args()
 
 path = args.input_directory
-output_data = args.output_data
+output_directory = args.output_directory
 
 # Create a function to process data
 def process(data, feature):
@@ -219,7 +220,8 @@ resampled_data = resampled_data.set_index('series')
 resampled_data = resampled_data[resampled_data['value'].notna()]
 
 # Save the processed dataset as csv
-resampled_data.to_csv(output_data)
+Path(output_directory).mkdir(parents=True, exist_ok=True)
+resampled_data.to_csv(output_directory+'dataset_processed.csv')
 
 # Print statistics
 print("old dataset")
@@ -248,9 +250,3 @@ print("t_ra_avg max", np.max(resampled_data[resampled_data.index == 't_ra_avg [�
 print("t_ra_avg min", np.min(resampled_data[resampled_data.index == 't_ra_avg [°C]']['value'].values))
 print("t_oa_avg max", np.max(resampled_data[resampled_data.index == 't_oa_avg [°C]']['value'].values))
 print("t_oa_avg min", np.min(resampled_data[resampled_data.index == 't_oa_avg [°C]']['value'].values))
-
-
-
-
-
-

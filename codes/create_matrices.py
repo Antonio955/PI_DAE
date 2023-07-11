@@ -6,6 +6,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import pickle5 as pickle
+from pathlib import Path
 import argparse
 parser = argparse.ArgumentParser()
 
@@ -58,6 +59,7 @@ t_ra_value = t_ra['value'].to_numpy()
 multi_feature = np.transpose(np.vstack((t_oa_timestamp, t_oa_value, Q_cool_value, Q_heat_value, t_ra_value)))
 
 # Save to csv and pkl
+Path(path_).mkdir(parents=True, exist_ok=True)
 np.savetxt(path_+'matrix_'+str(seeds)+'.csv', multi_feature[multi_indice], delimiter=',', fmt='%s')
 with open(path_+'matrix_'+str(seeds)+'.pkl', 'wb') as handle:
     pickle.dump(multi_feature[multi_indice], handle, protocol=pickle.HIGHEST_PROTOCOL)
