@@ -4,9 +4,9 @@ This repository is the official implementation of [Opening the Black Box: Illumi
 
 ## Requirements
 
-To install requirements:
+To install requirements (python 3.6.8):
 
-```setup (python 3.6.8)
+```setup
 pip install Keras==2.2.4
 pip install optuna==1.5.0
 pip install pickle5==0.0.12
