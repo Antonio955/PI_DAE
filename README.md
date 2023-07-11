@@ -82,7 +82,7 @@ Complete results (including physics-based coefficients, trainable parameters, co
 To reproduce the plots in the paper, run these commands (use --help for further information):
 
 ```plots
-py Codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2 --seeds 1
+py codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2 --seeds 1
 py codes/computational_curves_draw.py --path your_directory
 py codes/learning_curves_avg_draw.py
 py codes/learning_curves_std_draw.py
