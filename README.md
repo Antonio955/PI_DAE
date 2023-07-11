@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed_data/dataset_processed.csv
+py codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed_data/dataset_processed.csv
 ```
 
 ## Day-to-day matrix
@@ -31,7 +31,7 @@ py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.pr
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-py Codes/create_matrices.py --input_data your_directory/processed_data/dataset_processed.csv --output_directory your_directory/processed_data/shuffled_data/ --seeds 1
+py codes/create_matrices.py --input_data your_directory/processed_data/dataset_processed.csv --output_directory your_directory/processed_data/shuffled_data/ --seeds 1
 ```
 
 ## Correlations
@@ -39,7 +39,7 @@ py Codes/create_matrices.py --input_data your_directory/processed_data/dataset_p
 To get the correlation coefficients, run this command (use --help for further information):
 
 ```Correlation coefficients
-py Codes/scatterplot_print.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20
+py codes/scatterplot_print.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20
 ```
 
 ## Tuning
@@ -47,7 +47,7 @@ py Codes/scatterplot_print.py --path your_directory --threshold_q_cool 50 --thre
 To tune the model(s) in the paper, run this command (use --help for further information):
 
 ```tune
-py Codes/tune.py --path your_directory --lambdaa 1 --features 4 --target t_ra --corr 0.2
+py codes/tune.py --path your_directory --lambdaa 1 --features 4 --target t_ra --corr 0.2
 ```
 
 Tuned hyperparameters can be accessed here: your_directory/Results/Tuning/Tuning.csv
@@ -57,7 +57,7 @@ Tuned hyperparameters can be accessed here: your_directory/Results/Tuning/Tuning
 To train the model(s) in the paper, run this command (use --help for further information):
 
 ```train
-py Codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
 ```
 
 ## Evaluation
@@ -65,33 +65,29 @@ py Codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat
 To evaluate the model(s) in the paper, run these commands (use --help for further information):
 
 ```eval
-py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
-py Codes/computational_req.py --path your_directory --train_rate 0.1 --lambdaa 1 --features 4 --target t_ra
-py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
-py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+py codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py codes/computational_req.py --path your_directory --train_rate 0.1 --lambdaa 1 --features 4 --target t_ra
+py codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+py codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 ```
 
 ## Pre-trained Models
 
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+You can access the pretrained models here: your_directory/results/pre_trained_models/
 
 ## Results
 
-Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/Results/
+Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/results/Results.csv
 
 To reproduce the plots in the paper, run these commands (use --help for further information):
 
 ```plots
 py Codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2 --seeds 1
-py Codes/computational_curves_draw.py --path your_directory
-py Codes/learning_curves_avg_draw.py
-py Codes/learning_curves_std_draw.py
-py Codes/physics_coeff_draw.py
-py Codes/scatterplot_draw.py
+py codes/computational_curves_draw.py --path your_directory
+py codes/learning_curves_avg_draw.py
+py codes/learning_curves_std_draw.py
+py codes/physics_coeff_draw.py
+py codes/scatterplot_draw.py
 ```
 
 ## Contributing
