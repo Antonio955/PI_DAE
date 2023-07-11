@@ -18,7 +18,7 @@ path = args.path
 threshold_q_cool = args.threshold_q_cool
 threshold_q_heat = args.threshold_q_heat
 
-dataset_dir = path+'/Data/lbnlbldg59/processed/shuffled_data/multi_feature'+str(seeds)+'_new.pkl'      # directory containing data
+dataset_dir = path+'/processed_data/shuffled_data/matrix_'+str(seeds)+'.pkl'      # directory containing data
 
 
 with open(dataset_dir, 'rb') as handle:  # load preprocessed data

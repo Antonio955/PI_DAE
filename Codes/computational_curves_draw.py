@@ -39,7 +39,7 @@ nan6[:] = np.nan
 nan8 = np.empty((4,8))
 nan8[:] = np.nan
 
-file_path = path + '/Results/Inference_time/'
+file_path = path + '/results/inference_time/'
 
 Univariate_DAE_1_Case2_inference_01 = np.loadtxt(file_path+'time_univariate__t_ra_lambda0_Case2_len16.csv')
 Univariate_DAE_2_Case2_inference_01 = np.loadtxt(file_path+'time_univariate__q_heat_lambda0_Case2_len16.csv')

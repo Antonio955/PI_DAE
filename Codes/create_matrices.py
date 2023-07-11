@@ -58,6 +58,6 @@ t_ra_value = t_ra['value'].to_numpy()
 multi_feature = np.transpose(np.vstack((t_oa_timestamp, t_oa_value, Q_cool_value, Q_heat_value, t_ra_value)))
 
 # Save to csv and pkl
-np.savetxt(path_+'multi_feature'+str(seeds)+'_new.csv', multi_feature[multi_indice], delimiter=',', fmt='%s')
-with open(path_+'multi_feature'+str(seeds)+'_new.pkl', 'wb') as handle:
+np.savetxt(path_+'matrix_'+str(seeds)+'.csv', multi_feature[multi_indice], delimiter=',', fmt='%s')
+with open(path_+'matrix_'+str(seeds)+'.pkl', 'wb') as handle:
     pickle.dump(multi_feature[multi_indice], handle, protocol=pickle.HIGHEST_PROTOCOL)

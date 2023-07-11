@@ -31,7 +31,7 @@ for corr in [0.2, 0.4, 0.6, 0.8]:
   # Evaluate for different random shufflings
   for seeds in [1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910]:
 
-    dataset_dir = path + '/Data/lbnlbldg59/processed/shuffled_data/multi_feature'+str(seeds)+'_new.pkl'      # directory containing data
+    dataset_dir = path + '/processed_data/shuffled_data/matrix_'+str(seeds)+'.pkl'       # directory containing data
 
     RMSE_avg = run.KNN(dataset_dir=dataset_dir, missing='continuous', corr=corr, train_rate=train_rate,threshold_q_cool=threshold_q_cool, threshold_q_heat=threshold_q_heat)
 

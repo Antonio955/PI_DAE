@@ -24,7 +24,7 @@ features = args.features
 target = args.target
 corr = args.corr
 
-dataset_dir = path + '/Data/lbnlbldg59/processed/shuffled_data/multi_feature1_new.pkl'      # directory containing data
+dataset_dir = path + '/processed_data/shuffled_data/matrix_1.pkl'      # directory containing data
 
 # Define a variable tar to select the hyperparameters and feauture_ to define the size of the evaluation metrics
 tar = None
@@ -42,7 +42,7 @@ else:
   print("error")
 
 # Read csv containing hyperparameters
-df = pd.read_csv(path + '/Results/Tuning/Tuning.csv')
+df = pd.read_csv(path + '/results/Tuning.csv')
 
 # Initialize the physics-based coefficients to one
 a = 1

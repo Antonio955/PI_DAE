@@ -19,6 +19,7 @@ parser.add_argument("--lambdaa", type=int, help="Enter the lambda value (0 or 1)
 parser.add_argument("--features", type=int, help="Enter the number of features (1 for Univariate_DAE, 3 for Multivariate_DAE_1, 4 for Multivariate_DAE_2 and PI-DAE)")
 parser.add_argument("--target", type=str, help="Important if features = 1 (q_cool, q_heat, t_ra)")
 parser.add_argument("--corr", type=float, help="Corruption rate (0.2, 0.4, 0.6, 0.8)")
+parser.add_argument("--seeds", type=int, help="Enter the seeds among 1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910")
 
 args = parser.parse_args()
 
@@ -31,6 +32,7 @@ lambdaa = args.lambdaa
 features = args.features
 target = args.target
 corr = args.corr
+seeds = args.seeds
 
 # Define a variable tar to select the hyperparameters and feauture_ to define the size of the evaluation metrics
 tar = None
@@ -48,7 +50,7 @@ else:
   print("error")
 
 # Read csv containing hyperparameters
-df = pd.read_csv(path + '/Results/Tuning/Tuning.csv')
+df = pd.read_csv(path + '/results/Tuning.csv')
 
 # Initialize the physics-based coefficients to one
 a = 1
@@ -62,7 +64,7 @@ filters_size = int(df.loc[(df['corr'] == corr) & (df['tar'] == tar), 'filters_si
 lr = df.loc[(df['corr'] == corr) & (df['tar'] == tar), 'lr'].values[0]
 batch_size = int(df.loc[(df['corr'] == corr) & (df['tar'] == tar), 'batch_size'].values[0])
 
-dataset_dir = path + '/Data/lbnlbldg59/processed/shuffled_data/multi_feature1_new.pkl'      # directory containing data
-results_dir = path + '/Results/seeds'+str(seeds)+'/'                                                     # directory containing the saved models
+dataset_dir = path + '/processed_data/shuffled_data/matrix_' + str(seeds) + '.pkl'  # directory containing data
+results_dir = path + '/results/pre_trained_models/seeds' + str(seeds) + '/'  # directory containing the saved models
 
 run.Draw(dataset_dir=dataset_dir, results_dir=results_dir, missing='continuous', corr=corr, train_rate=train_rate, aug=aug,lambdaa=lambdaa, filters1=filters1, filters2=filters2, filters_size=filters_size, strides=1,batch_size=batch_size, features=features, target_=target, threshold_q_cool=threshold_q_cool,threshold_q_heat=threshold_q_heat, print_coeff=False)
