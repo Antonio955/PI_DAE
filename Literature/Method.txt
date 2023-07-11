@@ -1,2 +1,0 @@
-1. Find a state space representation model for "smart meter time-series" or "time-series"
-2. Try to use this SSR as in Gokhale et al. (2022) or Najera et al. (2022)
