@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/dataset_processed.csv
+py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed/dataset_processed.csv
 ```
 
 ## Day-to-day matrix
@@ -31,7 +31,15 @@ python Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg5
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-python Codes/create_matrices.py --input_data your_directory/dataset_processed.csv --output_directory your_directory/shuffled_data/ --seeds 1
+py Codes/create_matrices.py --input_data your_directory/processed/dataset_processed.csv --output_directory your_directory/processed/shuffled_data/ --seeds 1
+```
+
+## Correlations
+
+To get the correlation coefficients, run this command (use --help for further information):
+
+```Correlation coefficients
+py Codes/scatterplot_print.py --input_directory your_directory/processed/shuffled_data/ --threshold_q_cool 50 --threshold_q_heat 20
 ```
 
 ## Training
@@ -39,7 +47,7 @@ python Codes/create_matrices.py --input_data your_directory/dataset_processed.cs
 To train the model(s) in the paper, run this command:
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+py Codes/scatterplot_print.py --input_directory your_directory/processed/shuffled_data/ --threshold_q_cool 50 --threshold_q_heat 20
 ```
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
