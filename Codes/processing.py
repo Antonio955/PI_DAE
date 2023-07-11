@@ -5,6 +5,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle5 as pickle
+import argparse
+parser = argparse.ArgumentParser()
+
+parser.add_argument("--input_directory", help="Specify the input directory")
+parser.add_argument("--output_data", help="Specify the output data")
+
+args = parser.parse_args()
+
+path = args.input_directory
+output_data = args.output_data
 
 # Create a function to process data
 def process(data, feature):
@@ -60,8 +70,6 @@ def process(data, feature):
 
     # Return the cleaned DataFrame
     return data
-
-path = "C:/Users/Antonio/Desktop/Projects/PIANN_Singapore_ACM/Data/lbnlbldg59/"
 
 # Define thermal properties
 cp_a = 1.006
@@ -211,7 +219,7 @@ resampled_data = resampled_data.set_index('series')
 resampled_data = resampled_data[resampled_data['value'].notna()]
 
 # Save the processed dataset as csv
-resampled_data.to_csv(path+'processed/dataset_new.csv')
+resampled_data.to_csv(output_data)
 
 # Print statistics
 print("old dataset")

@@ -6,15 +6,18 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import pickle5 as pickle
+import argparse
+parser = argparse.ArgumentParser()
 
-path = 'C:/Users/Antonio/Desktop/Projects/PIANN_Singapore_ACM/Data/lbnlbldg59/processed/'
-path_ = 'C:/Users/Antonio/Desktop/Projects/PIANN_Singapore_ACM/Data/lbnlbldg59/processed/shuffled_data/'
+parser.add_argument("--input_data", help="Specify the input data")
+parser.add_argument("--output_directory", help="Specify the output directory")
+parser.add_argument("--seeds", type=int, help="Enter the seeds among 1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910")
 
-# Load the processed dataset
-dataset = pd.read_csv(path+"dataset_new.csv")
+args = parser.parse_args()
 
-# Set seeds
-seeds = 12345678910
+dataset = pd.read_csv(args.input_data)
+path_ = args.output_directory
+seeds = args.seeds
 
 # Create an index for the 363 days in the dataset
 indice = np.arange(363)

@@ -2,18 +2,21 @@
 
 
 import numpy as np
+import argparse
+parser = argparse.ArgumentParser()
 
 # Define prior to running
-threshold_q_cool = 0    # Thresholds for the IQR of cooling flow rate ( 0 for Case 1, 50 for Case 2)
-threshold_q_heat = 0    # Thresholds for the IQR of heating flow rate ( 0 for Case 1, 20 for Case 2)
-train_rate = 0.3        # Training rate (0.1, 0.2, 0.3, 0.4, 0.5)
-missing = 'continuous'  # Missing scenario (continuous or random)
+parser.add_argument("--path", help="Specify the path")
+parser.add_argument("--threshold_q_cool", type=int, help="Enter the threshold for q_cool (0 for Case 1, 50 for Case 2)")
+parser.add_argument("--threshold_q_heat", type=int, help="Enter the threshold for q_heat (0 for Case 1, 20 for Case 2")
+parser.add_argument("--train_rate", type=float, help="Enter the training rate (0.1, 0.2, 0.3, 0.4, 0.5)")
 
-print("threshold_q_cool", threshold_q_cool)
-print("threshold_q_heat", threshold_q_heat)
-print("train_rate", train_rate)
-print("missing", missing)
-print("***********************************")
+args = parser.parse_args()
+
+path = args.path
+threshold_q_cool = args.threshold_q_cool
+threshold_q_heat = args.threshold_q_heat
+train_rate = args.train_rate
 
 a_tensor = []
 b_tensor = []
@@ -21,7 +24,7 @@ c_tensor = []
 for corr in [0.2,0.4,0.6,0.8]:
   for seeds in [1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910]:
 
-    results_dir = 'C:/Users/Antonio/Desktop/Projects/PIANN_Singapore/Results/seeds'+str(seeds)+'/'                                                     # directory containing the saved models
+    results_dir = path + '/Results/seeds'+str(seeds)+'/'                                                     # directory containing the saved models
 
     name = str(corr).replace('.', '_')
     esp = str(train_rate).replace('.', '_')

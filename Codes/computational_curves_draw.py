@@ -3,6 +3,8 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+import argparse
+parser = argparse.ArgumentParser()
 
 #****************** plot figures with computer modern font ************************
 import matplotlib.font_manager as font_manager
@@ -12,6 +14,12 @@ matplotlib.rcParams['font.serif']=['Times New Roman'] + plt.rcParams['font.serif
 matplotlib.rcParams['mathtext.fontset']='cm'
 matplotlib.rcParams['axes.unicode_minus']=False
 #**********************************************************************************
+
+parser.add_argument("--path", help="Specify the path")
+
+args = parser.parse_args()
+
+path = args.path
 
 # Please refer to the values in results.csv (computational requirements sheet)
 Univariate_DAE_3_Case2_running = [66.624, 77.493, 92.699, 125.451, 144.559]
@@ -31,7 +39,7 @@ nan6[:] = np.nan
 nan8 = np.empty((4,8))
 nan8[:] = np.nan
 
-file_path = 'C:/Users/Antonio/Desktop/Projects/PIANN_Singapore_ACM/Results/Inference_time/'
+file_path = path + '/Results/Inference_time/'
 
 Univariate_DAE_1_Case2_inference_01 = np.loadtxt(file_path+'time_univariate__t_ra_lambda0_Case2_len16.csv')
 Univariate_DAE_2_Case2_inference_01 = np.loadtxt(file_path+'time_univariate__q_heat_lambda0_Case2_len16.csv')

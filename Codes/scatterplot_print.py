@@ -1,31 +1,32 @@
-################# Code for printing the correlation coefficients ######################################
-
-
-import random
-from sklearn.decomposition import PCA
-import numpy as np
-import pandas as pd
 import pickle5 as pickle
 import matplotlib.pyplot as plt
 import support_fun
 from scipy.stats import pearsonr
-
-# Define prior to running
-threshold_q_cool = 0    # Thresholds for the IQR of cooling flow rate (0, 10, 20, 30, 40, 10, 10, 10, 20, 20, 30, 50, 50, 50, 50)
-threshold_q_heat = 0    # Thresholds for the IQR of heating flow rate (0, 10, 20, 30, 40, 20, 30, 40, 30, 40, 40, 40, 30, 20, 10)
+import argparse
+parser = argparse.ArgumentParser()
 
 # Don't change the seeds
 seeds = 1
 
+parser.add_argument("--path", help="Specify the path")
+parser.add_argument("--threshold_q_cool", type=int, help="Enter the threshold for q_cool")
+parser.add_argument("--threshold_q_heat", type=int, help="Enter the threshold for q_heat")
 
-dataset_dir = 'C:/Users/Antonio/Desktop/Projects/PIANN_Singapore/Data/lbnlbldg59/processed/shuffled_data/multi_feature'+str(seeds)+'_new.pkl'      # directory containing data
+args = parser.parse_args()
+
+path = args.path
+threshold_q_cool = args.threshold_q_cool
+threshold_q_heat = args.threshold_q_heat
+
+dataset_dir = path+'/Data/lbnlbldg59/processed/shuffled_data/multi_feature'+str(seeds)+'_new.pkl'      # directory containing data
+
 
 with open(dataset_dir, 'rb') as handle:  # load preprocessed data
     dataset_ = (pickle.load(handle))  # [timestamp, t_oa, q_cool, q_heat, t_ra]
 
 dataset_ = np.reshape(dataset_, (int(len(dataset_) / 48), 48, 5))
 
-indice = support_fun.generate_indice_full(dataset_, threshold_q_cool=threshold_q_cool, threshold_q_heat=threshold_q_heat, others=False)
+indice = support_fun.generate_indice_full(dataset_, threshold_q_cool=threshold_q_cool, threshold_q_heat=threshold_q_heat)
 
 dataset = dataset_[indice]
 
