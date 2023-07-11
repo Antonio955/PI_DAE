@@ -81,16 +81,16 @@ You can download pretrained models here:
 
 ## Results
 
-Complete results (including physics-based coefficients and computational requirements) can be accessed here: your_directory/Results/Results.csv
+Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/Results/
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+To reproduce the plots in the paper, run these commands (use --help for further information):
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
+```plots
+py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py Codes/computational_req.py --path your_directory --train_rate 0.1 --lambdaa 1 --features 4 --target t_ra
+py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+```
 
 ## Contributing
 
