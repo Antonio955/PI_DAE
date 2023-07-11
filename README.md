@@ -66,6 +66,7 @@ To evaluate the model(s) in the paper, run these commands (use --help for furthe
 
 ```eval
 py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py Codes/computational_req.py --path your_directory --train_rate 0.1 --lambdaa 1 --features 4 --target t_ra
 py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
 ```
@@ -80,7 +81,7 @@ You can download pretrained models here:
 
 ## Results
 
-Our model achieves the following performance on :
+Complete results (including physics-based coefficients and computational requirements) can be accessed here: your_directory/Results/Results.csv
 
 ### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
