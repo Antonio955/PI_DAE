@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-py Codes/processing.py --input_directory your_directory/Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/Data/processed/dataset_processed.csv
+py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed_data/dataset_processed.csv
 ```
 
 ## Day-to-day matrix
@@ -31,7 +31,7 @@ py Codes/processing.py --input_directory your_directory/Data/lbnlbldg59/lbnlbldg
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-py Codes/create_matrices.py --input_data your_directory/Data/processed/dataset_processed.csv --output_directory your_directory/Data/processed/shuffled_data/ --seeds 1
+py Codes/create_matrices.py --input_data your_directory/processed_data/dataset_processed.csv --output_directory your_directory/processed_data/shuffled_data/ --seeds 1
 ```
 
 ## Correlations
