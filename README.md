@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-py codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed_data/dataset_processed.csv
+py codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_directory your_directory/processed_data/
 ```
 
 ## Day-to-day matrix
