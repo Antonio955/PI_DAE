@@ -86,10 +86,12 @@ Complete results (including physics-based coefficients, trainable parameters, co
 To reproduce the plots in the paper, run these commands (use --help for further information):
 
 ```plots
-py Codes/evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
-py Codes/computational_req.py --path your_directory --train_rate 0.1 --lambdaa 1 --features 4 --target t_ra
-py Codes/LIN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
-py Codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1
+py Codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2
+py Codes/computational_curves_draw.py --path your_directory
+py Codes/learning_curves_avg_draw.py
+py Codes/learning_curves_std_draw.py
+py Codes/physics_coeff_draw.py
+py Codes/scatterplot_draw.py
 ```
 
 ## Contributing
