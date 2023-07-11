@@ -77,7 +77,7 @@ You can access the pretrained models here: your_directory/results/pre_trained_mo
 
 ## Results
 
-Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/results/Results.csv
+Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/results/Results.xlsx
 
 To reproduce the plots in the paper, run these commands (use --help for further information):
 
