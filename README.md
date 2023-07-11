@@ -23,7 +23,7 @@ Download the full dataset from <https://bbd.labworks.org/ds/bbd/lbnlbldg59>
 To preprocess the data, run this command (use --help for further information):
 
 ```preprocessing
-py Codes/processing.py --input_directory your_directory/Data/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/Data/processed/dataset_processed.csv
+py Codes/processing.py --input_directory your_directory/lbnlbldg59/lbnlbldg59.processed/LBNLBLDG59/clean_Bldg59_2018to2020/clean data/ --output_data your_directory/processed_data/dataset_processed.csv
 ```
 
 ## Day-to-day matrix
@@ -31,7 +31,7 @@ py Codes/processing.py --input_directory your_directory/Data/lbnlbldg59/lbnlbldg
 Create 10 random shuffled day-to-day matrices, by running this command (use --help for further information):
 
 ```matrix creation
-py Codes/create_matrices.py --input_data your_directory/Data/processed/dataset_processed.csv --output_directory your_directory/Data/processed/shuffled_data/ --seeds 1
+py Codes/create_matrices.py --input_data your_directory/processed_data/dataset_processed.csv --output_directory your_directory/processed_data/shuffled_data/ --seeds 1
 ```
 
 ## Correlations
@@ -86,7 +86,7 @@ Complete results (including physics-based coefficients, trainable parameters, co
 To reproduce the plots in the paper, run these commands (use --help for further information):
 
 ```plots
-py Codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2
+py Codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2 --seeds 1
 py Codes/computational_curves_draw.py --path your_directory
 py Codes/learning_curves_avg_draw.py
 py Codes/learning_curves_std_draw.py
