@@ -92,10 +92,25 @@ To reproduce the plots in the paper, run these commands (use --help for further 
 
 ```plots
 py codes/draw_days.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra  --corr 0.2 --seeds 1
+```
+
+```plots
 py codes/computational_curves_draw.py --path your_directory
+```
+
+```plots
 py codes/learning_curves_avg_draw.py
+```
+
+```plots
 py codes/learning_curves_std_draw.py
+```
+
+```plots
 py codes/physics_coeff_draw.py
+```
+
+```plots
 py codes/scatterplot_draw.py
 ```
 
