@@ -82,7 +82,6 @@ for corr in [0.2, 0.4, 0.6, 0.8]:
   print("aug", aug)
   print("target", tar)
   print("lambdaa", lambdaa)
-  print("missing", missing)
   print("corr", corr)
 
   # Print average metrics over different random shufflings
