@@ -1,6 +1,6 @@
-# Opening the Black Box: Illuminating energy data imputation with building physics insights
+# Towards inherently interpretable energy data imputation models using building physics insight
 
-This repository is the official implementation of [Opening the Black Box: Illuminating energy data imputation with building physics insights](link to paper). 
+This repository is the official implementation of [Towards inherently interpretable energy data imputation models using building physics insight](link to paper). 
 
 ## Requirements
 
