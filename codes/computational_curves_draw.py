@@ -82,7 +82,7 @@ PIDAE_Case2_inference_05 = np.hstack((np.loadtxt(file_path+'time_multivariate__t
 x_inference_05 = np.arange(1, Univariate_DAE_1_Case2_inference_05.shape[1] + 1)
 
 
-n = 20
+n = 12.5
 
 fig, axs = plt.subplots(1, 2, figsize=(8, 4))
 
@@ -92,6 +92,7 @@ axs[0].plot(x_running, Univariate_DAE_3_Case2_running, label= 'Univariate_DAE_3'
 axs[0].plot(x_running, Multivariate_DAE_1_Case2_running, label= 'Multivariate_DAE_1', color='orange')
 axs[0].plot(x_running, Multivariate_DAE_2_Case2_running, label= 'Multivariate_DAE_2', color='green')
 axs[0].plot(x_running, PIDAE_Case2_running, label= 'PIDAE', color='red')
+axs[0].set_title("Case 2", fontsize=n)
 axs[0].set_xlabel('Training rate [-]', fontsize=n)
 axs[0].set_ylabel('Running time [s]', fontsize=n)
 axs[0].tick_params(axis='both', which='major', labelsize=n)
@@ -102,10 +103,13 @@ axs[1].plot(x_inference_01,  np.nanmean(np.vstack((Univariate_DAE_3_Case2_infere
 axs[1].plot(x_inference_01,  np.nanmean(np.vstack((Multivariate_DAE_1_Case2_inference_01,Multivariate_DAE_1_Case2_inference_02,Multivariate_DAE_1_Case2_inference_03,Multivariate_DAE_1_Case2_inference_04,Multivariate_DAE_1_Case2_inference_05)),axis=0), label= 'Multivariate_DAE_1', color='orange')
 axs[1].plot(x_inference_01,  np.nanmean(np.vstack((Multivariate_DAE_2_Case2_inference_01,Multivariate_DAE_2_Case2_inference_02,Multivariate_DAE_2_Case2_inference_03,Multivariate_DAE_2_Case2_inference_04,Multivariate_DAE_2_Case2_inference_05)),axis=0), label= 'Multivariate_DAE_2', color='green')
 axs[1].plot(x_inference_01,  np.nanmean(np.vstack((PIDAE_Case2_inference_01,PIDAE_Case2_inference_02,PIDAE_Case2_inference_03,PIDAE_Case2_inference_04,PIDAE_Case2_inference_05)),axis=0), label= 'PIDAE', color='red')
+axs[1].set_title("Case 2", fontsize=n)
 axs[1].set_xlabel('Days', fontsize=n)
 axs[1].set_ylabel('Inference time [s]', fontsize=n)
 axs[1].tick_params(axis='both', which='major', labelsize=n)
+axs[1].legend(loc='center left', fontsize=n, bbox_to_anchor=(1, 0.5))
 
-plt.tight_layout()
+
+plt.subplots_adjust(top=0.85)  # Modify the top parameter to reduce the space
+plt.subplots_adjust(hspace=0.5)  # Increase the hspace value to add extra space between subplotsplt.show()
 plt.show()
-plt.close()
