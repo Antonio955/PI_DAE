@@ -114,10 +114,6 @@ py codes/learning_curves_std_draw.py
 py codes/physics_coeff_draw.py
 ```
 
-```plots
-py codes/scatterplot_draw.py
-```
-
 ## Contributing
 
 >📋  Pick a licence and describe how to contribute to your code repository. 
