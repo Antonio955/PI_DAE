@@ -34,12 +34,16 @@ Create 10 random shuffled day-to-day matrices, by running this command (use --he
 py codes/create_matrices.py --input_data your_directory/processed_data/dataset_processed.csv --output_directory your_directory/processed_data/shuffled_data/ --seeds 1
 ```
 
-## Correlations
+## Correlations and statistics
 
-To get the correlation coefficients, run this command (use --help for further information):
+To get the correlation coefficients and general statistics, run these command (use --help for further information):
 
-```Correlation coefficients
-py codes/scatterplot_print.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20
+```Whole dataset
+py codes/statistics.py --path your_directory
+```
+
+```Per training set
+py codes/statistics_training.py --path your_directory
 ```
 
 ## Tuning
