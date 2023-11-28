@@ -54,7 +54,7 @@ To tune the model(s) in the paper, run this command (use --help for further info
 py codes/tune.py --path your_directory --lambdaa 1 --features 4 --target t_ra --corr 0.2
 ```
 
-Tuned hyperparameters can be accessed here: your_directory/Results/Tuning/Tuning.csv
+Tuned hyperparameters can be accessed here: your_directory/Results/Tuning.csv
 
 ## Training
 
