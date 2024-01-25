@@ -127,6 +127,7 @@ def Training(dataset_dir, results_dir, missing, aug, corr, train_rate, lambdaa, 
 
         # Devide into training, validation and evaluation
         trX_dataset, teX_dataset, ttX_dataset = np.split(dataset, [int(train_rate * len(dataset)),int((train_rate + 0.1) * len(dataset))])
+        print(len(trX_dataset))
 
         # Initialize the validation loss
         MSE_array = []
