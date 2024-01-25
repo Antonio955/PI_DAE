@@ -61,7 +61,7 @@ Tuned hyperparameters can be accessed here: your_directory/Results/Tuning.csv
 To train the model(s) in the paper, run this command (use --help for further information):
 
 ```train
-py codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --aug 80 --lambdaa 1 --features 4 --target t_ra
+py codes/train.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --train_rate 0.1 --seeds_coeff 0 --aug 80 --lambdaa 1 --features 4 --target t_ra
 ```
 
 ## Evaluation
@@ -88,6 +88,14 @@ py codes/KNN_train_evaluate.py --path your_directory --threshold_q_cool 50 --thr
 
 You can access the pretrained models here: your_directory/results/pre_trained_models/
 
+## Physics-based coefficients
+
+To print the optimized physics-based coefficients, run this command (use --help for further information):
+
+```eval
+py codes/physics_coeff_print.py --path your_directory --threshold_q_cool 50 --threshold_q_heat 20 --seeds_coeff 0
+```
+
 ## Results
 
 Complete results (including physics-based coefficients, trainable parameters, computational requirements and cluster documentation) can be accessed here: your_directory/results/Results.xlsx
@@ -112,6 +120,10 @@ py codes/learning_curves_std_draw.py
 
 ```plots
 py codes/physics_coeff_draw.py
+```
+
+```plots
+py codes/physics_coeff_draw_2.py
 ```
 
 ## Contributing
